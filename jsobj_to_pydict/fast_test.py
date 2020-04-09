@@ -1,4 +1,4 @@
-from javascript_to_python import convert_to_python
+from jsobj_to_pydict import convert_to_python
 
 string = """{
   "nome": "Thiago",
