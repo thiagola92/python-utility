@@ -1,4 +1,4 @@
-from rename_key import rename
+from rename_key import rename_key
 
 def main():
   first = {
@@ -7,7 +7,7 @@ def main():
   }
 
   print(first)
-  rename(first, 'nome', 'name')
+  rename_key(first, 'nome', 'name')
   print(first)
 
 main()
