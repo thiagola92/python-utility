@@ -8,7 +8,7 @@ class ANSI_COLOR():
     'magenta': '5',
     'cyan': '6',
     'white': '7',
-    '256': '8;5;{0}',
+    '8bit': '8;5;{0}',
     'rgb': '8;2;{0};{1};{2}',
     'default': '9',
   }
