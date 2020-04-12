@@ -1,5 +1,3 @@
-import sys
-
 class ANSI_SGR():
   sgr = {
     'reset': '0',
@@ -90,8 +88,8 @@ class ANSI_SGR():
     'bright background color': '10', # 100-107
   }
 
-  def write(name):
-    if name not int ANSI_SGR.sgr.keys():
+  def get(name):
+    if name not in ANSI_SGR.sgr.keys():
       raise Exception('UNKNOW SGR')
 
-    sys.stdout.write(ANSI_SGR.sgr[name])
+    return ANSI_SGR.sgr[name]

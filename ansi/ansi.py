@@ -1,5 +1,3 @@
-import sys
-
 class ANSI():
   esc = '\x1b'
   sequence = {
@@ -15,8 +13,8 @@ class ANSI():
     'ris': 'c',
   }
 
-  def write(name):
+  def get(name):
     if name not in ANSI.sequence.keys():
       raise Exception('UNKNOW SEQUENCE')
 
-    sys.stdout.write(ANSI.esc + ANSI.sequence[name])
+    return ANSI.esc + ANSI.sequence[name]

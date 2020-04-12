@@ -1,5 +1,3 @@
-import sys
-
 class ANSI_CSI():
   code = {
     'cuu': 'A',
@@ -15,14 +13,14 @@ class ANSI_CSI():
     'su': 'S',
     'sd': 'T',
     'hvp': 'f',
-    'sgr': 'm'
+    'sgr': 'm',
     '5i': '5i',
     '4i': '4i',
     'dsr': '6n',
   }
 
-  def write(name, *args):
+  def get(name, *args):
     if name not in ANSI_CSI.code.keys():
       raise Exception('UNKNOW CODE')
 
-    sys.stdout.write(ANSI_CSI.code[name])
+    return ANSI_CSI.code[name]

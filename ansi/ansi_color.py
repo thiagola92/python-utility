@@ -1,5 +1,3 @@
-import sys
-
 class ANSI_COLOR():
   color = {
     'black': '0',
@@ -15,9 +13,9 @@ class ANSI_COLOR():
     'default': '9',
   }
 
-  def write(name, *args):
+  def get(name, *args):
     if name not in ANSI_COLOR.color.keys():
       raise Exception('UNKNOW COLOR')
 
-    sys.stdout.write(ANSI_COLOR.color[name].format(*args))
+    return ANSI_COLOR.color[name].format(*args)
 
