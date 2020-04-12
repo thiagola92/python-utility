@@ -1,5 +1,4 @@
 import sys
-from ansi import ANSI
 
 class ANSI_CSI():
   code = {
@@ -24,6 +23,6 @@ class ANSI_CSI():
 
   def write(name, *args):
     if name not in ANSI_CSI.code.keys():
-      raise Exception("UNKNOW CODE")
+      raise Exception('UNKNOW CODE')
 
     sys.stdout.write(ANSI_CSI.code[name])

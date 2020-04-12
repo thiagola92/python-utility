@@ -1,6 +1,4 @@
 import sys
-from asni import ANSI
-from ansi_csi import ANSI_CSI
 
 class ANSI_SGR():
   sgr = {
@@ -59,7 +57,6 @@ class ANSI_SGR():
     'not crossed out': '29',
 
     'foreground color': '3', # 30-39
-
     'background color': '4', # 40-49
 
     'framed': '51',
