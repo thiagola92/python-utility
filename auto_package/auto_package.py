@@ -1,3 +1,5 @@
+import gc
+
 class AutoPackage():
     """
     A package to store a list of items until it fills up.
@@ -21,3 +23,5 @@ class AutoPackage():
             self.send_package(self.package)
         
         self.package.clear()
+
+        gc.collect()

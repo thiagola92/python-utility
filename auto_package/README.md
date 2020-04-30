@@ -1,5 +1,6 @@
 # auto-package
-When dealing with big data, you can't hold all data in memory before sending somewhere. This package will automatically send itself when full and free memory.  
+When dealing with big data, you can't hold all data in memory before sending somewhere.  
+This package will automatically send itself when full and free memory.  
 
 # usage
 ```python
