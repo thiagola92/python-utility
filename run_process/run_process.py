@@ -1,6 +1,3 @@
-# put on your main
-# multiprocessing.set_start_method(method)
-
 import multiprocessing
 
 def run_process(function, *args, **kwargs):
