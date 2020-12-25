@@ -6,21 +6,21 @@ class AutoPackage():
     When full, send all items to your destination.
     """
 
-    def __init__(self, send_package=None, size=1000000):
-        self.send_package = send_package
+    def __init__(self, send_function, size=1000000):
+        self.send_function = send_function
         self.size = int(size)
 
         self.package = []
     
-    def add(self, item):
+    def add(self, item, *args, **kwargs):
         self.package.append(item)
 
-        if(self.size >= len(self.package)):
-            self.send()
+        if len(self.package) >= self.size:
+            self.send(*args, **kwargs)
 
-    def send(self):
-        if(len(self.package) > 0 and self.send_package != None):
-            self.send_package(self.package)
+    def send(self, *args, **kwargs):
+        if len(self.package) > 0:
+            self.send_function(self.package, *args, **kwargs)
         
         self.package.clear()
 
